@@ -1,16 +1,13 @@
 import { Injectable } from '@angular/core';
-import {Http} from '@angular/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable()
 export class VkapiService {
-  users = [
-    {name: 'name1', property: false},
-    {name: 'name2', property: false},
-    {name: 'name3', property: false}
-  ];
-  constructor(private http: Http) {}
+  constructor(private httpClient: HttpClient) {}
 
-  getStat() {
-    return this.http.get('https://randomuser.me/api/?inc=gender,name,picture,location&results=8&nat=gb');
+  getUser() {
+    return this.httpClient.get('https://api.vk.com/method/users.get?user_ids=17261895&fields=bdate&v=5.73', {
+      headers: new HttpHeaders().append('Access-Control-Allow-Origin: *', '')
+    });
   }
 }
