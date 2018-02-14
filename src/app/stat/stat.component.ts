@@ -8,12 +8,13 @@ import {VkapiService} from '../vkapi.service';
   providers: [ VkapiService ]
 })
 export class StatComponent implements OnInit {
-  user;
+  user = {};
 
   constructor(private vkapiService: VkapiService) {}
 
   ngOnInit() {
-      this.vkapiService.getUser().then(user => this.user = user);
+      // this.vkapiService.getUser().subscribe(user => console.log(user.response[0]));
+      this.vkapiService.getUser().subscribe(user => this.user = user.response[0]);
   }
 
 }
