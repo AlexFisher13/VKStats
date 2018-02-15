@@ -1,4 +1,4 @@
-<label for="userid">Введите id пользователя: </label>
+<label for="userid">Введите id пользователя VK: </label>
 <input id="userid" placeholder="id пользователя" #userid>
 <button type="submit" (click)="idHandler(userid)">Отправить</button>
 
@@ -6,12 +6,10 @@
 <p><strong>id: </strong> {{user.uid}}</p>
 <p><strong>имя: </strong>{{user.first_name}}</p>
 <p><strong>фамилия: </strong>{{user.last_name}}</p>
-<p><strong>др: </strong>{{user.bdate}}</p>
-<p><strong>пол: </strong>{{user.sex}}</p>
-<p><strong>город: </strong>{{user.city}}</p>
-<p><strong>страна: </strong>{{user.country}}</p>
-<p><strong>контакты: </strong>{{user.contacts}}</p>
-<p><strong>школа: </strong>{{user.schools}}</p>
+<p><strong>день рождения: </strong>{{user.bdate}}</p>
 <p><strong>статус: </strong>{{user.status}}</p>
+<p><strong>страна: </strong>{{user.country}}</p>
+<p><strong>город: </strong>{{user.city}}</p>
+<p><strong>школа: </strong>{{user.schools}}</p>
 <p><strong>интересы: </strong>{{user.interests}}</p>
 <p><strong>обо мне: </strong>{{user.about}}</p>
