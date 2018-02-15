@@ -9,12 +9,16 @@ import {VkapiService} from '../vkapi.service';
 })
 export class StatComponent implements OnInit {
   user = {};
+  id;
 
   constructor(private vkapiService: VkapiService) {}
 
   ngOnInit() {
-      // this.vkapiService.getUser().subscribe(user => console.log(user.response[0]));
-      this.vkapiService.getUser().subscribe(user => this.user = user.response[0]);
+      this.vkapiService.getUser(this.id).subscribe(user => this.user = user.response[0]);
   }
-
+  idHandler(id) {
+   console.log(id.value);
+   this.id = id.value;
+   this.ngOnInit();
+  }
 }
