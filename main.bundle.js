@@ -125,7 +125,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "input {\r\n  background-color: lightgray;\r\n  border: 0;\r\n  height: 23px;\r\n  width: 160px;\r\n  padding: 3px 8px;\r\n  display: block;\r\n  margin: 10px 0;\r\n}\r\nbutton {\r\n  margin: 5px 0;\r\n}\r\nh4 {\r\n  margin: 10px 0;\r\n}\r\nstrong {\r\n  text-transform: uppercase;\r\n}\r\n", ""]);
+exports.push([module.i, "* {\r\n  font-family: sans-serif;\r\n  color: rgba(0,0,0,.85);\r\n}\r\nlabel {\r\n  font-size: 18px;\r\n}\r\n.container {\r\n  background: lightskyblue;\r\n  padding: 30px;\r\n  border-radius: 20px;\r\n  width: 320px;\r\n  margin: 0 auto;\r\n  text-align: center;\r\n}\r\ninput {\r\n  border: 0;\r\n  border-radius: 5px;\r\n  height: 23px;\r\n  width: 160px;\r\n  padding: 3px 8px;\r\n  display: block;\r\n  margin: 10px auto;\r\n  text-align: center;\r\n}\r\nbutton {\r\n  margin: 0;\r\n  border-radius: 5px;\r\n  border: 0;\r\n  width: 176px;\r\n  height: 28px;\r\n}\r\n.container div {\r\n  text-align: left;\r\n}\r\np {\r\n  margin: 10px 0;\r\n  font-size: 15px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -138,7 +138,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/stat/stat.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<label for=\"userid\">Введите id пользователя VK: </label>\n<input id=\"userid\" placeholder=\"id пользователя\" #userid>\n<button type=\"submit\" (click)=\"idHandler(userid)\">Отправить</button>\n\n<h4>Найденная информация</h4>\n<p><strong>id: </strong> {{user.uid}}</p>\n<p><strong>имя: </strong>{{user.first_name}}</p>\n<p><strong>фамилия: </strong>{{user.last_name}}</p>\n<p><strong>день рождения: </strong>{{user.bdate}}</p>\n<p><strong>статус: </strong>{{user.status}}</p>\n<p><strong>страна: </strong>{{user.country}}</p>\n<p><strong>город: </strong>{{user.city}}</p>\n<p><strong>школа: </strong>{{user.schools}}</p>\n<p><strong>интересы: </strong>{{user.interests}}</p>\n<p><strong>обо мне: </strong>{{user.about}}</p>\n"
+module.exports = "<div class=\"container\">\n  <label for=\"userid\">Введите id пользователя VK: </label>\n  <input id=\"userid\" placeholder=\"id пользователя\" #userid>\n  <button type=\"submit\" (click)=\"idHandler(userid)\">Отправить</button>\n  <p>Найденная информация</p>\n\n  <div>\n    <p>ID:  {{user.uid}}</p>\n    <p>Имя: {{user.first_name}}</p>\n    <p>Фамилия: {{user.last_name}}</p>\n    <p>День рождения: {{user.bdate}}</p>\n    <p>Статус: {{user.status}}</p>\n    <p>Страна: {{user.country}}</p>\n    <p>Город: {{user.city}}</p>\n    <p>Школа: {{user.schools}}</p>\n    <p>Интересы: {{user.interests}}</p>\n    <p>Обо мне: {{user.about}}</p>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
