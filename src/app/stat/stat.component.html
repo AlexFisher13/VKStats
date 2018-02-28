@@ -1,15 +1,20 @@
-<label for="userid">Введите id пользователя VK: </label>
-<input id="userid" placeholder="id пользователя" #userid>
-<button type="submit" (click)="idHandler(userid)">Отправить</button>
+<div class="container">
+  <label for="userid">Введите id пользователя VK: </label>
+  <input id="userid" placeholder="id пользователя" #userid>
+  <button type="submit" (click)="idHandler(userid)">Отправить</button>
+  <p>Найденная информация</p>
 
-<h4>Найденная информация</h4>
-<p><strong>id: </strong> {{user.uid}}</p>
-<p><strong>имя: </strong>{{user.first_name}}</p>
-<p><strong>фамилия: </strong>{{user.last_name}}</p>
-<p><strong>день рождения: </strong>{{user.bdate}}</p>
-<p><strong>статус: </strong>{{user.status}}</p>
-<p><strong>страна: </strong>{{user.country}}</p>
-<p><strong>город: </strong>{{user.city}}</p>
-<p><strong>школа: </strong>{{user.schools}}</p>
-<p><strong>интересы: </strong>{{user.interests}}</p>
-<p><strong>обо мне: </strong>{{user.about}}</p>
+  <div>
+    <p>ID:  {{user.uid}}</p>
+    <p>Имя: {{user.first_name}}</p>
+    <p>Фамилия: {{user.last_name}}</p>
+    <p>День рождения: {{user.bdate}}</p>
+    <p>Статус: {{user.status}}</p>
+    <p>Страна: {{user.country}}</p>
+    <p>Город: {{user.city}}</p>
+    <p>Школа: {{user.schools}}</p>
+    <p>Интересы: {{user.interests}}</p>
+    <p>Обо мне: {{user.about}}</p>
+  </div>
+</div>
+
